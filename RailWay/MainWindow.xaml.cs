@@ -1,6 +1,7 @@
 ﻿using RailWay.AllWindow;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,7 +55,41 @@ namespace RailWay
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                string enteredLogin = txtUsername.Text;
+                string enteredPassword = txtPassword.Password;
 
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "SELECT UserID, RoleID FROM [User] WHERE Login = @Login AND Password = @Password";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@Login", enteredLogin);
+                    command.Parameters.AddWithValue("@Password", enteredPassword);
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        int userId = reader.GetInt32(0);
+                        int roleId = reader.GetInt32(1);
+
+                        UserWindow userWindow = new UserWindow(userId, roleId);
+                        userWindow.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверный логин или пароль.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при авторизации: {ex.Message}");
+            }
         }
     }
 }
