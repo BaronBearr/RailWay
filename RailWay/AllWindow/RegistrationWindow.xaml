@@ -1,0 +1,82 @@
+﻿<Window x:Class="RailWay.AllWindow.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RailWay.AllWindow"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Регистрация пользователя" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="ФИО:" Width="100" VerticalAlignment="Center"/>
+                <TextBox Name="txtFullName" Width="200" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Дата рождения:" Width="100" VerticalAlignment="Center"/>
+                <DatePicker Name="dpDateOfBirth" Width="200" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Почта:" Width="100" VerticalAlignment="Center"/>
+                <TextBox Name="txtEmail" Width="200" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Пол:" Width="100" VerticalAlignment="Center"/>
+                <ComboBox Name="cmbGender" Width="200" VerticalAlignment="Center" Loaded="genderComboBox_Loaded"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Логин:" Width="100" VerticalAlignment="Center"/>
+                <TextBox Name="txtLogin" Width="200" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Пароль:" Width="100" VerticalAlignment="Center"/>
+                <PasswordBox Name="txtPassword" Width="200" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Телефон:" Width="100" VerticalAlignment="Center"/>
+                <TextBox Name="txtPhone" Width="200" VerticalAlignment="Center" GotFocus="PhoneNumberTextBox_GotFocus" LostFocus="PhoneNumberTextBox_LostFocus" PreviewTextInput="PhoneNumberTextBox_PreviewTextInput">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Text" Value="+7 xxx xxx xx xx"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=phoneNumberTextBox}" Value="+7 xxx xxx xx-xx">
+                                    <Setter Property="Foreground" Value="LightGray"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Паспорт:" Width="100" VerticalAlignment="Center"/>
+                <TextBox Name="txtPassportNumber" Width="200" VerticalAlignment="Center" PreviewTextInput="PassportNumberTextBox_PreviewTextInput"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Паспорт ДО:" Width="100" VerticalAlignment="Center"/>
+                <DatePicker Name="dpExpiryDate" Width="200" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Дата выдачи:" Width="100" VerticalAlignment="Center"/>
+                <DatePicker Name="dpIssueDate" Width="200" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Страна:" Width="100" VerticalAlignment="Center"/>
+                <TextBox Name="txtCountry" Width="200" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <Button Content="Зарегистрироваться" Width="120" Height="30" Click="RegisterButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
