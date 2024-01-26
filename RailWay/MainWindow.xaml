@@ -7,27 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="95*"/>
-            <RowDefinition Height="339*"/>
-        </Grid.RowDefinitions>
-        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,47,0,0" Grid.Row="1">
-            <Label FontWeight="Bold" Content="Логин:" Width="50" Height="30"/>
-            <TextBox x:Name="txtUsername" Width="100" Height="20"/>
-            <Label FontWeight="Bold" Content="Пароль:" Width="55" Height="30"/>
-            <PasswordBox x:Name="txtPassword" Width="100" Height="20"/>
-            <Button Content="Войти" Background="AliceBlue" Click="LoginButton_Click" Width="100" Height="30" Margin="0,40,0,0"/>
-        </StackPanel>
-        <TextBlock FontSize="14" Margin="0,0,15,10" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right"
-           Text="Нет аккаунта?" 
-           Cursor="Hand" 
-           TextDecorations="Underline"
-           Foreground="Blue"
-           MouseEnter="TextBlock_MouseEnter"
-           MouseLeave="TextBlock_MouseLeave"
-           MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
-           Height="20"
-           Width="90"/>
+      <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+        
         <Label FontWeight="Bold" HorizontalAlignment="Center" FontSize="20" Margin="0,30,0,0">Авторизация</Label>
+        <TextBlock Text=""></TextBlock>
     </Grid>
 </Window>
