@@ -3,10 +3,130 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:local="clr-namespace:RailWay.AllPages"
+      xmlns:kit="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d"
-      Title="RegPage" Height="450" Width="800">
+      Title="Регистрация">
     <Grid>
-        
+        <StackPanel Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="ФИО:"
+                           Style="{StaticResource MainTextBlock}"
+                           Grid.Row="0"
+                           Grid.Column="0" />
+                <TextBlock Text="Пол:"
+                           Style="{StaticResource MainTextBlock}"
+                           Grid.Row="1"
+                           Grid.Column="0" />
+                <TextBlock Text="Паспорт:"
+                           Style="{StaticResource MainTextBlock}"
+                           Grid.Row="2"
+                           Grid.Column="0" />
+                <TextBlock Text="Паспорт ДО:"
+                           Style="{StaticResource MainTextBlock}"
+                           Grid.Row="3"
+                           Grid.Column="0" />
+                <TextBlock Text="Дата выдачи:"
+                           Style="{StaticResource MainTextBlock}"
+                           Grid.Row="4"
+                           Grid.Column="0" />
+                <TextBlock Text="Страна:"
+                           Style="{StaticResource MainTextBlock}"
+                           Grid.Row="5"
+                           Grid.Column="0" />
+
+                <TextBox Name="TxtFullName"
+                         Style="{StaticResource MainTextBox}"
+                         Grid.Row="0"
+                         Grid.Column="1" />
+                <ComboBox Name="CmbGender"
+                          Loaded="genderComboBox_Loaded"
+                          Style="{StaticResource MainComboBox}"
+                          Grid.Row="1"
+                          Grid.Column="1" />
+                <TextBox Name="TxtPassportNumber"
+                         Style="{StaticResource MainTextBox}"
+                         Grid.Row="2"
+                         Grid.Column="1" />
+                <DatePicker Name="DpExpiryDate"
+                            Style="{StaticResource MainDatePicker}"
+                            Grid.Row="3"
+                            Grid.Column="1" />
+                <DatePicker Name="DpIssueDate"
+                            Style="{StaticResource MainDatePicker}"
+                            Grid.Row="4"
+                            Grid.Column="1" />
+                <TextBox Name="TxtCountry"
+                         Style="{StaticResource MainTextBox}"
+                         Grid.Row="5"
+                         Grid.Column="1" />
+
+                <TextBlock Text="Дата рождения:"
+                           Style="{StaticResource MainTextBlock}"
+                           Grid.Row="0"
+                           Grid.Column="2" />
+                <TextBlock Text="Почта:"
+                           Style="{StaticResource MainTextBlock}"
+                           Grid.Row="1"
+                           Grid.Column="2" />
+                <TextBlock Text="Телефон:"
+                           Style="{StaticResource MainTextBlock}"
+                           Grid.Row="2"
+                           Grid.Column="2" />
+                <TextBlock Text="Логин:"
+                           Style="{StaticResource MainTextBlock}"
+                           Grid.Row="3"
+                           Grid.Column="2" />
+                <TextBlock Text="Пароль:"
+                           Style="{StaticResource MainTextBlock}"
+                           Grid.Row="4"
+                           Grid.Column="2" />
+
+                <DatePicker Name="DpDateOfBirth"
+                            Style="{StaticResource MainDatePicker}"
+                            Grid.Row="0"
+                            Grid.Column="3" />
+                <TextBox Name="TxtEmail"
+                         Style="{StaticResource MainTextBox}"
+                         Grid.Row="1"
+                         Grid.Column="3" />
+                <kit:MaskedTextBox Name="TxtPhone"
+                                   Style="{StaticResource MainMaskedTextBox}"
+                                   Mask="+7 000 000 00 00"
+                                   PromptChar="x"
+                                   Grid.Row="2"
+                                   Grid.Column="3" />
+                <TextBox Name="TxtLogin"
+                         Style="{StaticResource MainTextBox}"
+                         Grid.Row="3"
+                         Grid.Column="3" />
+                <PasswordBox Name="TxtPassword"
+                             Style="{StaticResource MainPassBox}"
+                             Grid.Row="4"
+                             Grid.Column="3" />
+            </Grid>
+
+            <Button Name="RegisterButton"
+                    Content="Зарегистрироваться" 
+                    Click="RegisterButton_Click" 
+                    Width="200"
+                    Style="{StaticResource MainButton}"/>
+        </StackPanel>
     </Grid>
 </Page>

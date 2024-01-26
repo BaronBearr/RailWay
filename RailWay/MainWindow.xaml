@@ -3,16 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RailWay"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        SizeToContent="WidthAndHeight"
+        MinHeight="450"
+        MinWidth="800"
+        Title="{Binding ElementName=Frame,Path=Content.Title}">
     <Grid>
       <Grid.RowDefinitions>
           <RowDefinition Height="Auto"/>
           <RowDefinition Height="*"/>
       </Grid.RowDefinitions>
         
-        <Label FontWeight="Bold" HorizontalAlignment="Center" FontSize="20" Margin="0,30,0,0">Авторизация</Label>
-        <TextBlock Text=""></TextBlock>
+        <TextBlock Text="{Binding ElementName=Frame,Path=Content.Title}"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   FontSize="20"
+                   Margin="0,15,0,15"/>
+        
+        <Button Name="BackButton"
+                Grid.Row="0"
+                HorizontalAlignment="Right"
+                Style="{StaticResource MainButton}"
+                Click="BackButton_OnClick"
+                Content="Назад"/>
+        
+        <Frame x:Name="Frame"
+               NavigationUIVisibility="Hidden"
+               Grid.Row="1"
+               Navigated="Frame_OnNavigated"/>
     </Grid>
 </Window>
