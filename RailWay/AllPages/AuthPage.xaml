@@ -1,0 +1,65 @@
+﻿<Page x:Class="RailWay.AllPages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="Авторизация">
+    <Grid>
+        <StackPanel Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Логин:"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           Style="{StaticResource MainTextBlock}" />
+                <TextBlock Text="Пароль:"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           Style="{StaticResource MainTextBlock}" />
+
+                <TextBox x:Name="txtUsername"
+                         Style="{StaticResource MainTextBox}"
+                         Grid.Row="0"
+                         Grid.Column="1" />
+
+                <PasswordBox x:Name="txtPassword"
+                             Style="{StaticResource MainPassBox}"
+                             Grid.Row="1"
+                             Grid.Column="1" />
+                
+                <TextBlock FontSize="14" 
+                           HorizontalAlignment="Right"
+                           Grid.Row="2"
+                           Grid.Column="1">
+                    <Hyperlink NavigateUri="RegPage.xaml">Нет аккаунта?</Hyperlink>
+                </TextBlock>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal">
+                <Button
+                    Content="Войти как гость"
+                    Click="GuestButton_Click"
+                    Style="{StaticResource MainButton}"
+                    />
+                <Button 
+                Content="Войти" 
+                Click="LoginButton_Click"
+                Style="{StaticResource MainButton}"
+                Margin="30,0,0,0"
+                />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

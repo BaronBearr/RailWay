@@ -1,0 +1,45 @@
+﻿<Page x:Class="RailWay.AllPages.AddSchedule"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RailWay.AllPages"
+      xmlns:kit="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddSchedule">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="398"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="10,10,10,10" Orientation="Vertical" Width="210">
+            <TextBlock Text="Номер поезда:" Style="{StaticResource MainTextBlock}"/>
+            <TextBox HorizontalAlignment="Left" x:Name="txtTrainNumber" Width="150" Margin="10,0,0,10" Style="{StaticResource MainTextBox}"/>
+            <TextBlock Text="Станция отправления:" Style="{StaticResource MainTextBlock}"/>
+            <ComboBox HorizontalAlignment="Left" x:Name="cmbDepartureStation" Width="150" Margin="10,0,0,10" DisplayMemberPath="StationName" SelectedValuePath="StationID" Style="{StaticResource MainComboBox}"/>
+            <TextBlock Text="Станция прибытия:" Style="{StaticResource MainTextBlock}"/>
+            <ComboBox HorizontalAlignment="Left" x:Name="cmbArrivalStation" Width="150" Margin="10,0,0,10" DisplayMemberPath="StationName" SelectedValuePath="StationID" Style="{StaticResource MainComboBox}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="0,5,0,5" Orientation="Vertical" HorizontalAlignment="Center" Width="210">
+            <TextBlock Text="Время отправления:" Style="{StaticResource MainTextBlock}"/>
+            <kit:MaskedTextBox Name="txtDepartureTime"
+                Style="{StaticResource MainMaskedTextBox}"
+                Mask="00:00"
+                PromptChar="x"/>
+            <TextBlock Text="Время прибытия:" Style="{StaticResource MainTextBlock}"/>
+            <kit:MaskedTextBox Name="txtArrivalTime"
+                    Style="{StaticResource MainMaskedTextBox}"
+                    Mask="00:00"
+                    PromptChar="x"/>
+            <Button HorizontalAlignment="Center" Content="Добавить поезд" Click="AddTrainButton_Click" Margin="0,30,0,0" Style="{StaticResource MainButton}" Width="130"/>
+        </StackPanel>
+    </Grid>
+</Page>
