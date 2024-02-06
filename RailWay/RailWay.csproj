@@ -71,6 +71,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="AllPages\AuthPage.xaml" />
+    <Page Include="AllPages\MyTicketsPage.xaml" />
     <Page Include="AllPages\RegPage.xaml" />
     <Page Include="AllPages\SchedulePage.xaml" />
     <Page Include="MainWindow.xaml">
@@ -81,6 +82,9 @@
     <Compile Include="AllClasses\TrainPath.cs" />
     <Compile Include="AllPages\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\MyTicketsPage.xaml.cs">
+      <DependentUpon>MyTicketsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="AllPages\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>

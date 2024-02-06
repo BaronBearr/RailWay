@@ -47,9 +47,15 @@
                 </TextBlock>
             </Grid>
 
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Войти" 
                     Click="LoginButton_Click"
                     Style="{StaticResource MainButton}"/>
+            <Button Name="GuestLoginButton" 
+                Content="Войти как гость" 
+                    Click="GuestLoginButton_OnClick"
+                    Style="{StaticResource MainButton}"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

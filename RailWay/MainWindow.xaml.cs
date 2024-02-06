@@ -6,11 +6,13 @@ namespace RailWay
 {
     public partial class MainWindow : Window
     {
+        public int UserID;
         public MainWindow()
         {
             InitializeComponent();
             Frame.Navigate(new AuthPage());
         }
+        
 
         private void Frame_OnNavigated(object sender, NavigationEventArgs e)
         {
