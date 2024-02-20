@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ed3b3902-cc20-451f-a051-a883ed8bf5c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RailWay/AllClasses/Route.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RailWay/AllClasses/Station.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RailWay/AllClasses/Ticket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RailWay/AllClasses/Train.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RailWay/AllPages/PersonalAreaPage.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RailWay/AllPages/PersonalAreaPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailWay/AllClasses/DBBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RailWay/AllClasses/DBBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailWay/AllClasses/TrainPath.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailWay/AllPages/AuthPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RailWay/AllPages/AuthPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailWay/AllPages/MyTicketsPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RailWay/AllPages/MyTicketsPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailWay/AllPages/MyTicketsPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RailWay/AllPages/MyTicketsPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailWay/AllPages/SchedulePage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RailWay/AllPages/SchedulePage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailWay/AllPages/SchedulePage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RailWay/AllPages/SchedulePage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailWay/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/RailWay/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailWay/RailWay.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RailWay/RailWay.csproj" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2c3SI2PheVNZRauSlxnmViNrgS4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "develop__alena",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed3b3902-cc20-451f-a051-a883ed8bf5c1" name="Changes" comment="" />
+      <created>1707338687210</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707338687210</updated>
+      <workItem from="1707338689307" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

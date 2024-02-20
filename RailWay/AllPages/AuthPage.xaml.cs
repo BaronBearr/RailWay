@@ -14,8 +14,8 @@ namespace RailWay.AllPages
         {
             InitializeComponent();
         }
-        
-            private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
+
+        private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
         {
             ((TextBlock)sender).Foreground = Brushes.Red;
             ((TextBlock)sender).TextDecorations = null;
@@ -50,8 +50,16 @@ namespace RailWay.AllPages
                         int userId = reader.GetInt32(0);
                         int roleId = reader.GetInt32(1);
 
-                        // todo избавиться от окон
-                        NavigationService.Navigate(new SchedulePage());
+                        ((MainWindow)Application.Current.MainWindow).UserID = userId;
+                        switch (roleId)
+                        {
+                            case 1:
+                                NavigationService.Navigate(new EmployeePages.SсhedulePage());
+                                break;
+                            case 2:
+                                NavigationService.Navigate(new SchedulePage());
+                                break;
+                        }
                     }
                     else
                     {
@@ -63,6 +71,12 @@ namespace RailWay.AllPages
             {
                 MessageBox.Show($"Ошибка при авторизации: {ex.Message}");
             }
+        }
+
+        private void GuestLoginButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).UserID = 0;
+            NavigationService.Navigate(new SchedulePage());
         }
     }
 }

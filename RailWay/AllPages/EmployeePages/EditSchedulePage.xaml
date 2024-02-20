@@ -1,0 +1,105 @@
+﻿<Page x:Class="RailWay.AllPages.EmployeePages.EditSchedulePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:kit="http://schemas.xceed.com/wpf/xaml/toolkit"
+      xmlns:local="clr-namespace:RailWay.AllPages.EmployeePages"
+      mc:Ignorable="d"
+      Loaded="EditSchedulePage_OnLoaded"
+      Title="Редактирование расписания" Height="450" Width="800">
+
+    <Page.Resources>
+        <Style TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Right" />
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Column="0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Номер поезда:"
+                           Style="{StaticResource MainTextBlock}" />
+                <TextBox x:Name="TrainNumTextBox"
+                         Text="{Binding TrainNumber}"
+                         Style="{StaticResource MainTextBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Цена билета:"
+                           Style="{StaticResource MainTextBlock}" />
+                <TextBox x:Name="TrainCostTextBox"
+                         Text="{Binding TicketCost}"
+                         Style="{StaticResource MainTextBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Тип поезда:"
+                           Style="{StaticResource MainTextBlock}" />
+                <ComboBox x:Name="TrainTypeComboBox"
+                          DisplayMemberPath="Name"
+                          Style="{StaticResource MainComboBox}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Маршрут:"
+                           Style="{StaticResource MainTextBlock}" />
+                <ComboBox x:Name="RouteComboBox"
+                          DisplayMemberPath="Name"
+                          Style="{StaticResource MainComboBox}" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Column="1">
+            <TextBlock Text="Станции:"
+                       Style="{StaticResource MainTextBlock}" />
+            <DataGrid x:Name="StationDataGrid"
+                      Height="200"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      Width="300"
+                      Margin="5">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*"
+                                        Header="Название"
+                                        Binding="{Binding Name}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox x:Name="StationComboBox"
+                          DisplayMemberPath="Name"
+                          Style="{StaticResource MainComboBox}" />
+                <Button x:Name="AddButton"
+                        Width="30"
+                        MinWidth="0"
+                        Style="{StaticResource MainButton}"
+                        Click="AddButton_OnClick"
+                        Content="+" />
+                <Button x:Name="DeleteButton"
+                        Width="30"
+                        MinWidth="0"
+                        Style="{StaticResource  MainButton}"
+                        Click="DeleteButton_OnClick"
+                        Content="-" />
+            </StackPanel>
+        </StackPanel>
+
+        <Button Grid.ColumnSpan="2"
+                Grid.Row="1"
+                Content="Сохранить"
+                Click="ButtonBase_OnClick"
+                Style="{StaticResource MainButton}"
+                VerticalAlignment="Bottom" />
+    </Grid>
+</Page>

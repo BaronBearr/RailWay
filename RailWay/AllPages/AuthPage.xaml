@@ -43,13 +43,19 @@
                            HorizontalAlignment="Right"
                            Grid.Row="2"
                            Grid.Column="1">
-                    <Hyperlink NavigateUri="RegPage.xaml">Нет аккаунта?</Hyperlink>
+                    <Hyperlink NavigateUri="/AllPages/UserPages/RegPage.xaml">Нет аккаунта?</Hyperlink>
                 </TextBlock>
             </Grid>
 
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Войти" 
                     Click="LoginButton_Click"
                     Style="{StaticResource MainButton}"/>
+            <Button Name="GuestLoginButton" 
+                Content="Войти как гость" 
+                    Click="GuestLoginButton_OnClick"
+                    Style="{StaticResource MainButton}"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
