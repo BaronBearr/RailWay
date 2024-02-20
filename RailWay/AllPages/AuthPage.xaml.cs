@@ -54,6 +54,7 @@ namespace RailWay.AllPages
                         switch (roleId)
                         {
                             case 1:
+                                NavigationService.Navigate(new EmployeePages.SсhedulePage());
                                 break;
                             case 2:
                                 NavigationService.Navigate(new SchedulePage());
@@ -72,6 +73,10 @@ namespace RailWay.AllPages
             }
         }
 
-        private void GuestLoginButton_OnClick(object sender, RoutedEventArgs e) => NavigationService.Navigate(new SchedulePage());
+        private void GuestLoginButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).UserID = 0;
+            NavigationService.Navigate(new SchedulePage());
+        }
     }
 }

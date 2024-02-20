@@ -71,25 +71,43 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="AllPages\AuthPage.xaml" />
-    <Page Include="AllPages\MyTicketsPage.xaml" />
-    <Page Include="AllPages\RegPage.xaml" />
-    <Page Include="AllPages\SchedulePage.xaml" />
+    <Page Include="AllPages\EmployeePages\EditSchedulePage.xaml" />
+    <Page Include="AllPages\EmployeePages\SсhedulePage.xaml" />
+    <Page Include="AllPages\UserPages\MyTicketsPage.xaml" />
+    <Page Include="AllPages\UserPages\PersonalAreaPage.xaml" />
+    <Page Include="AllPages\UserPages\RegPage.xaml" />
+    <Page Include="AllPages\UserPages\SchedulePage.xaml" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AllClasses\Card.cs" />
     <Compile Include="AllClasses\DBBase.cs" />
-    <Compile Include="AllClasses\TrainPath.cs" />
+    <Compile Include="AllClasses\Route.cs" />
+    <Compile Include="AllClasses\Station.cs" />
+    <Compile Include="AllClasses\Ticket.cs" />
+    <Compile Include="AllClasses\Train.cs" />
+    <Compile Include="AllClasses\TrainType.cs" />
+    <Compile Include="AllClasses\User.cs" />
     <Compile Include="AllPages\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\MyTicketsPage.xaml.cs">
+    <Compile Include="AllPages\EmployeePages\EditSchedulePage.xaml.cs">
+      <DependentUpon>EditSchedulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\EmployeePages\SсhedulePage.xaml.cs">
+      <DependentUpon>SсhedulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\UserPages\MyTicketsPage.xaml.cs">
       <DependentUpon>MyTicketsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\RegPage.xaml.cs">
+    <Compile Include="AllPages\UserPages\PersonalAreaPage.xaml.cs">
+      <DependentUpon>PersonalAreaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\UserPages\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\SchedulePage.xaml.cs">
+    <Compile Include="AllPages\UserPages\SchedulePage.xaml.cs">
       <DependentUpon>SchedulePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">

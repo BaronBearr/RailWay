@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Navigation;
 using RailWay.AllPages;
+using RailWay.AllPages.EmployeePages;
 
 namespace RailWay
 {
@@ -10,7 +11,8 @@ namespace RailWay
         public MainWindow()
         {
             InitializeComponent();
-            Frame.Navigate(new AuthPage());
+            // Frame.Navigate(new AuthPage());
+            Frame.Navigate(new SсhedulePage());
         }
         
 

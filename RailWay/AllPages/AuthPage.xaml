@@ -43,7 +43,7 @@
                            HorizontalAlignment="Right"
                            Grid.Row="2"
                            Grid.Column="1">
-                    <Hyperlink NavigateUri="RegPage.xaml">Нет аккаунта?</Hyperlink>
+                    <Hyperlink NavigateUri="/AllPages/UserPages/RegPage.xaml">Нет аккаунта?</Hyperlink>
                 </TextBlock>
             </Grid>
 
